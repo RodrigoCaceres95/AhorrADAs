@@ -136,6 +136,25 @@ a:hover {
 .boton a:hover {
     background-color: inherit;
 }
+/* Estilos del boton de cancelar */
+.cancelButton {
+    background-color: rgb(185, 185, 185);
+    padding: 7px 16px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+/* coloco los botones de Agregar y Cancelar al final del contenedor */
+.botones{
+    display: flex;
+    margin-top: 16px;
+    justify-content: flex-end;
+    line-height: 30px;
+    font-size: 1vw;
+}
+.botones .boton {
+    padding: 7px 16px;
+}
 .tabla {
     display: flex;
     justify-content: space-between;
@@ -166,6 +185,24 @@ img {
     .filter .boton{
         display: block;
         margin: 0.4em auto;
+    }
+    .botones .boton {
+        margin: 0.4em;
+    }
+    .botones .cancelButton {
+        margin: 0.4em;
+    }
+    .botones{
+        display: flex;
+        margin-top: 16px;
+        justify-content: flex-end;
+        line-height: 30px;
+        font-size: 2vw;
+    }
+    .botones .boton {
+        width: auto;
+        margin: 0.4em;
+        padding: 7px 16px;
     }
 }
 /* Corrección de una fuente estilizada de bootstrap */
@@ -200,13 +237,7 @@ img {
     font-weight: bold;
     padding: 10px;
 }
-/* coloco los botones de Agregar y Cancelar al final del contenedor */
-.botones{
-    display: flex;
-    margin: 10px;
-    justify-content: flex-end;
-    font-size: 1vw;
-}
+
 /* los arreglos de .flex daban problemas porque estaban pensados para múltiples cajas, cuando tengo una sola, esto me arregla dicho problema */
 .flexOneBox{
     margin: 3rem 12px;
@@ -234,16 +265,8 @@ img {
 /* Arreglo del formulario */
 .formulario{
     width: 100%;
-    padding: 10px;
 }
-/* Estilos del boton de cancelar */
-.cancelButton {
-    background-color: rgb(185, 185, 185);
-    padding: 10px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-}
+
 /* estilos para la hoja de categorias */
 .filter {
     display: flex;
@@ -302,6 +325,21 @@ img {
     .span {
         padding: 2px;
     }
+    .botones .cancelButton {
+        margin: 0.4em;
+    }
+    .botones{
+        display: flex;
+        margin-top: 16px;
+        justify-content: flex-end;
+        line-height: 20px;
+        font-size: 4vw;
+    }
+    .botones .boton {
+        width: auto;
+        margin: 0.4em;
+        padding: 7px 16px;
+    }
 }
 @media(max-width:500px){
     h1 a{
@@ -335,5 +373,21 @@ img {
     }
     .span {
         padding: 5px;
+    }
+    .botones .cancelButton {
+        margin: 0.4em;
+    }
+    .botones{
+        display: flex;
+        margin-top: 16px;
+        justify-content: flex-end;
+        line-height: 10px;
+        font-size: 2vw;
+    }
+    .botones .boton {
+        height: auto;
+        width: auto;
+        margin: 0.4em;
+        padding: 7px 16px;
     }
 }
