@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>AhorrADAs</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <section class="container-fluid">
+            <section class="logo navbar-brand nav-item">
+                <img class="wallet" src="../wallet-filled-white.svg">
+                <h1 class="title">
+                    <a to="../index.html">
+                        AhorrADAs
+                    </a>
+                </h1>
+            </section>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../index.html">
+                            <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M19.88,18.47c0.44-0.7,0.7-1.51,0.7-2.39c0-2.49-2.01-4.5-4.5-4.5s-4.5,2.01-4.5,4.5s2.01,4.5,4.49,4.5 c0.88,0,1.7-0.26,2.39-0.7L21.58,23L23,21.58L19.88,18.47z M16.08,18.58c-1.38,0-2.5-1.12-2.5-2.5c0-1.38,1.12-2.5,2.5-2.5 s2.5,1.12,2.5,2.5C18.58,17.46,17.46,18.58,16.08,18.58z M15.72,10.08c-0.74,0.02-1.45,0.18-2.1,0.45l-0.55-0.83l-3.8,6.18 l-3.01-3.52l-3.63,5.81L1,17l5-8l3,3.5L13,6C13,6,15.72,10.08,15.72,10.08z M18.31,10.58c-0.64-0.28-1.33-0.45-2.05-0.49 c0,0,5.12-8.09,5.12-8.09L23,3.18L18.31,10.58z" fill="white"></path></svg>
+                            Balances</a></li>
+                    <li class="nav-item">
+                        <a href="categorias.html">
+                            <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16"> <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" fill="white"></path> </svg>
+                            Categorías</a></li>
+                    <li class="nav-item">
+                        <a href="reportes.html">
+                            <svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><title>ionicons-v5-q</title><path d="M128,496H48V304h80Z" fill="white"></path><path d="M352,496H272V208h80Z" fill="white"></path><path d="M464,496H384V96h80Z" fill="white"></path><path d="M240,496H160V16h80Z" fill="white"></path></svg>
+                            Reportes</a></li>
+                </ul>
+            </div>
+        </section>
+    </nav>
+    <!-- creo la clase flexonebox para poder trabajar apartado, más cómodo y también de manera más rápida a la hora de crear páginas con un solo contenedor -->
+    <section class="contenedor flexOneBox">
+        <h2>Categorías</h2>
+        <label class="label">Nombre</label>
+        <section class="filter">
+            <input class="inputs" type="text">
+            <button class="boton">Agregar</button>
+        </section>
+        <section>
+            <section class="filters">
+                <span class="span">Comida</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+            <section class="filters">
+                <span class="span">Servicios</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+            <section class="filters">
+                <span class="span">Salidas</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+            <section class="filters">
+                <span class="span">Educación</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+            <section class="filters">
+                <span class="span">Transporte</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+            <section class="filters">
+            <span class="span">Trabajo</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+            <section class="filters">
+                <span class="span">Aguinaldo</span>
+                <section class="modifyLinks">
+                    <a class="selection" href="#">Editar</a><a class="selection" href="#">Eliminar</a>
+                </section>
+            </section>
+        </section>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

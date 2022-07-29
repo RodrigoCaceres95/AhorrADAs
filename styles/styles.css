@@ -1,0 +1,339 @@
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    background-color: rgb(237, 237, 237);
+    min-height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* Todo el index.html y lo que envuelve al navbar se encuentra acá */
+nav{
+    background-color: rgb(65, 182, 116);
+}
+/* Personalización de algunas clases de bootstrap */
+.navbar-expand-lg {
+    display: flex;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+.navbar-brand{
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+    min-height: 3.25rem;
+}
+h1, a{
+    color: white;
+    text-decoration: none;
+}
+h3{
+    font-size: 20px;
+    margin-top: 10px
+}
+h2{
+    font-weight: bold;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+a:hover {
+    color: white;
+    background-color: rgb(47, 120, 79);
+}
+/* estilos para el svg */
+.wallet {
+    max-height: 35px;
+    flex-grow: 1;
+    margin: auto;
+}
+.contenedor{
+    padding: 0px 10px 10px 10px;
+    background-color: white;
+    display: block;
+    padding: 20px;
+    margin: 24px 20px 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -9px rgba(0,0,0,0.63);
+}
+.flex{
+    margin-top: 3rem;
+}
+/* tuve un pequeño problema con la especificación de tipo mobile así que tuve que recurrir a un media query para salvar tiempos */
+@media(max-width:1023px){
+    .flex{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px;
+    }
+    .contenedor {
+        margin: 24px 0 0 0;
+        padding: 12px;
+    }
+    .logo{
+        max-width: 30px;
+    }
+    .logo h1{
+        font-size: 2rem!important;
+    }
+    nav li {
+        margin-top: 20px;
+    }
+}
+/* media queries para pantallas con mayor resolución a 1024 */
+@media (min-width: 1024px){
+    .flex{
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+    }
+    .small-box {
+        flex: none;
+        width: 25%;
+    }
+    .big-box {
+        width: 50%;
+        max-height: 600px;
+    }
+    .logo{
+        margin-left: 15px;
+    }
+
+}
+
+.flexTitle{
+    display: flex;
+    justify-content: space-between;
+}
+/* la clase .inputs sirve para todos los inputs de todas las páginas */
+.inputs {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    color: rgb(8, 8, 8);
+    box-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
+    border-radius: 3px;
+}
+/* estilo para los botones exceptuando el de cancelar */
+.boton{
+    color: white;
+    background-color: rgb(65, 182, 116);
+    border: none;
+    border-radius: 8px;
+    height: 45px;
+}
+.boton a:hover {
+    background-color: inherit;
+}
+.tabla {
+    display: flex;
+    justify-content: space-between;
+}
+#Ganancias {
+    color: rgb(65, 182, 116);
+}
+#Gastos {
+    color: red;
+}
+img {
+    flex-grow: 1;
+    width: 100%;
+}
+/* Arreglo de botones para pantallas menores a 768px */
+@media (max-width:768px){
+    .flexTitle{
+        flex-direction: column;
+    }
+    .boton{
+        width: 25%;
+        margin: 0.4em;
+        font-size: 2vw;
+    }
+    .inputs{
+        height: auto;
+    }
+    .filter .boton{
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+/* Corrección de una fuente estilizada de bootstrap */
+.display-6{
+    text-align: center;
+    margin: auto;
+}
+.balance {
+    margin-bottom: 48px;
+}
+/* estilos generales para las imágenes de la página de inicio y reportes sin operaciones */
+#noTransaction {
+    margin: 48px 0;
+    padding: 48px 0;
+    text-align: center;
+}
+#noTransaction img {
+    display: block;
+    height: auto;
+    max-width: 350px;
+    margin: auto;
+}
+#noTransaction h3{
+    margin: 16px 0 10px 0;
+}
+/* pagina para añadir operaciones nuevas */
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    font-weight: bold;
+    padding: 10px;
+}
+/* coloco los botones de Agregar y Cancelar al final del contenedor */
+.botones{
+    display: flex;
+    margin: 10px;
+    justify-content: flex-end;
+    font-size: 1vw;
+}
+/* los arreglos de .flex daban problemas porque estaban pensados para múltiples cajas, cuando tengo una sola, esto me arregla dicho problema */
+.flexOneBox{
+    margin: 3rem 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 12px;
+    justify-content: center;
+}
+/* Arreglo de .flexOneBox para ventanas de mayor resolucion */
+@media(min-width:1024px) {
+    .flexOneBox {
+        width: auto;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+@media(min-width:1216px){
+    .flexOneBox {
+        width: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+/* Arreglo del formulario */
+.formulario{
+    width: 100%;
+    padding: 10px;
+}
+/* Estilos del boton de cancelar */
+.cancelButton {
+    background-color: rgb(185, 185, 185);
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+/* estilos para la hoja de categorias */
+.filter {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+.filter input {
+    margin-right: 10px;
+}
+.filter .boton {
+    width: auto;
+}
+.selection {
+    margin: 10px;
+    color: rgb(7, 129, 129);
+}
+.selection:hover {
+    background-color: transparent;
+    color: rgb(7, 129, 129);
+}
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.span {
+    padding: 10px;
+    background-color: aquamarine;
+}
+/* estilos para algunos de los displays a ser manipulados por DOM */
+.newAction {
+    display: none;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 12px;
+}
+.actionDescription label {
+    margin-right: 20px;
+}
+.actionDetails label{
+    margin-right: 10px;
+}
+/* Parches generales para pantallas muy pequeñas */
+@media(max-width:250px){
+    h1 a{
+        font-size: 8vw;
+    }
+    .contenedor{
+        margin: 0px 0px 10px 0px;
+    }
+    .boton {
+        width: 30%;
+        height: 20px;
+        font-size: 5vw;
+    }
+    .span {
+        padding: 2px;
+    }
+}
+@media(max-width:500px){
+    h1 a{
+        font-size: 8vw;
+    }
+    h2, h3, .display-6{
+        font-size: 8vw;
+    }
+    .contenedor{
+        margin: 0px 0px 10px 0px;
+    }
+    .flexTitle{
+        width: 100%;
+    }
+    .flexOneBox{
+        margin: 3rem 12px;
+        font-size: 2vw;
+    }
+    .flexOneBox .label {
+        font-size: 5vw;
+    }
+    .filter{
+        margin: 0;
+    }
+    .filter .boton {
+        height: 20px;
+    }
+    .boton {
+        max-width: 50%;
+        font-size: 2vw;
+    }
+    .span {
+        padding: 5px;
+    }
+}
