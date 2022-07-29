@@ -126,15 +126,15 @@ a:hover {
     border-radius: 3px;
 }
 /* estilo para los botones exceptuando el de cancelar */
-.boton{
+.btn{
     color: white;
     background-color: rgb(65, 182, 116);
     border: none;
     border-radius: 8px;
-    height: 45px;
 }
-.boton a:hover {
-    background-color: inherit;
+.btn:hover {
+    color: white;
+    background-color: rgb(47, 120, 79);
 }
 /* Estilos del boton de cancelar */
 .cancelButton {
@@ -144,6 +144,11 @@ a:hover {
     border: none;
     border-radius: 5px;
 }
+.cancelButton:hover{
+    color: white;
+    background-color: rgb(61, 61, 61);
+    transition: .5s;
+}
 /* coloco los botones de Agregar y Cancelar al final del contenedor */
 .botones{
     display: flex;
@@ -151,9 +156,6 @@ a:hover {
     justify-content: flex-end;
     line-height: 30px;
     font-size: 1vw;
-}
-.botones .boton {
-    padding: 7px 16px;
 }
 .tabla {
     display: flex;
@@ -174,20 +176,13 @@ img {
     .flexTitle{
         flex-direction: column;
     }
-    .boton{
+    .btn{
         width: 25%;
         margin: 0.4em;
         font-size: 2vw;
     }
     .inputs{
         height: auto;
-    }
-    .filter .boton{
-        display: block;
-        margin: 0.4em auto;
-    }
-    .botones .boton {
-        margin: 0.4em;
     }
     .botones .cancelButton {
         margin: 0.4em;
@@ -199,7 +194,7 @@ img {
         line-height: 30px;
         font-size: 2vw;
     }
-    .botones .boton {
+    .botones .btn {
         width: auto;
         margin: 0.4em;
         padding: 7px 16px;
@@ -276,9 +271,6 @@ img {
 .filter input {
     margin-right: 10px;
 }
-.filter .boton {
-    width: auto;
-}
 .selection {
     margin: 10px;
     color: rgb(7, 129, 129);
@@ -317,11 +309,6 @@ img {
     .contenedor{
         margin: 0px 0px 10px 0px;
     }
-    .boton {
-        width: 30%;
-        height: 20px;
-        font-size: 5vw;
-    }
     .span {
         padding: 2px;
     }
@@ -334,11 +321,6 @@ img {
         justify-content: flex-end;
         line-height: 20px;
         font-size: 4vw;
-    }
-    .botones .boton {
-        width: auto;
-        margin: 0.4em;
-        padding: 7px 16px;
     }
 }
 @media(max-width:500px){
@@ -364,13 +346,6 @@ img {
     .filter{
         margin: 0;
     }
-    .filter .boton {
-        height: 20px;
-    }
-    .boton {
-        max-width: 50%;
-        font-size: 2vw;
-    }
     .span {
         padding: 5px;
     }
@@ -383,11 +358,5 @@ img {
         justify-content: flex-end;
         line-height: 10px;
         font-size: 2vw;
-    }
-    .botones .boton {
-        height: auto;
-        width: auto;
-        margin: 0.4em;
-        padding: 7px 16px;
     }
 }
